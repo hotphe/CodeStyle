@@ -131,48 +131,6 @@ public class ScenarioSystemBuilder
             Debug.LogError($"Error loading data: {ex.Message}");
             return false;
         }
-
-        /*
-        try
-        {
-            TextAsset targetCSV = Resources.Load<TextAsset>("CSV/ScenarioScript");
-            if (targetCSV == null)
-            {
-                Debug.LogError("Failed to load ScenarioScript CSV.");
-                return false;
-            }
-
-            ScenarioScriptParser scriptParser = new ScenarioScriptParser();
-            _scenarioScripts = scriptParser.Parse(targetCSV);
-
-            targetCSV = Resources.Load<TextAsset>("CSV/ScenarioChoice");
-            if (targetCSV == null)
-            {
-                Debug.LogError("Failed to load ScenarioChoice CSV.");
-                return false;
-            }
-
-            ScenarioChoiceParser choiceParser = new ScenarioChoiceParser();
-            _scenarioChoices = choiceParser.Parse(targetCSV);
-
-            targetCSV = Resources.Load<TextAsset>("CSV/ScenarioTrigger");
-            if (targetCSV == null)
-            {
-                Debug.LogError("Failed to load ScenarioTrigger CSV.");
-                return false;
-            }
-
-            ScenarioTriggerParser triggerParser = new ScenarioTriggerParser();
-            _scenarioTriggers = triggerParser.Parse(targetCSV);
-
-            return true;
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Error loading data: {ex.Message}");
-            return false;
-        }
-        */
     }
 
     private bool LoadScenarioData()
