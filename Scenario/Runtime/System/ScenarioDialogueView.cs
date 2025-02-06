@@ -14,7 +14,7 @@ public class ScenarioDialogueView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _speakerTitle;
     [SerializeField] private Image _dialogueEnd;
     [SerializeField] private float _endFadeDuration;
-
+    [SerializeField] private int _maxVisibleLine = 4;
     [Tooltip("Second")][SerializeField] private float _typingSpeed;
 
     private UniTaskCompletionSource<bool> _completionSource;
@@ -23,7 +23,7 @@ public class ScenarioDialogueView : MonoBehaviour
 
     public void Initialize()
     {
-        _dialogueText.maxVisibleLines = 4;
+        _dialogueText.maxVisibleLines = _maxVisibleLine;
     }
 
     public UniTask<bool> Show(ScenarioScript script)
