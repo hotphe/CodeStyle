@@ -39,7 +39,7 @@ public class ChoiceHolder : MonoBehaviour
         _button.onClick.AddListener(OnClickButton);
         return _completionSource.Task.AttachExternalCancellation(this.GetCancellationTokenOnDestroy());
     }
-
+    // 한번 클릭하면 이미지 변환, 두번 클릭하면 선택확정
     private void OnClickButton()
     {
         if(!_isSelected)
